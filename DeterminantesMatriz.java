@@ -24,6 +24,19 @@ public class DeterminantesMatriz {
     }
     return cofactor;
   }
+  public static double detMatriz(double[][] matriz){
+    if(matriz.length == 2)
+      return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0];
+    double suma = 0;
+    for(int i = 0; i < matriz.length; i++){
+      if(i % 2 == 0){
+        suma += matriz[0][i] * detMatriz(cofactor(matriz, i));
+      }else{
+        suma += -matriz[0][i] * detMatriz(cofactor(matriz, i));
+      }
+    }
+    return suma;
+  }
   public static void main(String[] args){
 
   }
