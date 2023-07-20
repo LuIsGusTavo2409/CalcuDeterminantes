@@ -37,6 +37,17 @@ public class DeterminantesMatriz {
     }
     return suma;
   }
+   public static double[][] getMatriz(){
+    Scanner sc = new Scanner(System.in);
+    int size = sc.nextInt();
+    double[][] matriz = new double[size][size];
+    for(int i = 0; i < size; i++){
+      for(int u = 0; u < size; u++){
+        matriz[i][u] = sc.nextInt();
+      }
+    }
+    return matriz;
+  }
   public static void main(String[] args){
 
   }
