@@ -1,4 +1,5 @@
 package CalcuDeterminantes;
+import java.util.Scanner;
 
 public class DeterminantesMatriz {
 
